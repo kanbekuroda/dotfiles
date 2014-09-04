@@ -36,8 +36,8 @@ set-option -g status-utf8 on
 # set-option -g status-justify "centre"
 set-option -g status-left-length 80
 set-option -g status-right-length 120
-set-option -g status-left "#(~/dotfiles/.tmux/tmux-powerline/status-left.sh)#[bg=red]#[fg=black]⮀#[bg=red]#[fg=white] mem #(used-mem)%% #[bg=black]#[fg=red]⮀"
-set-option -g status-right "#(~/dotfiles/.tmux/tmux-powerline/status-right.sh)"
+set-option -g status-left "#(~/dotfiles/tmux-powerline/status-left.sh)#[bg=red]#[fg=black]⮀#[bg=red]#[fg=white] mem #(used-mem)%% #[bg=black]#[fg=red]⮀"
+set-option -g status-right "#(~/dotfiles/tmux-powerline/status-right.sh)"
 
 # 文字色と背景色
 set -g status-fg white
