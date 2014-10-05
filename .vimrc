@@ -33,7 +33,7 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
 "クリップボードにコピー
-set clipboard=unnamed,autoselect
+set clipboard+=unnamed,autoselect
 
 "画面最後の行をできる限り表示する。
 set display=lastline
