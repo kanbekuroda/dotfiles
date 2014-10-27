@@ -204,13 +204,13 @@ function! s:ExecPy()
 
         "let vimplugin_screenplugin =0
 
-    "" vim-r-plugin {{{2
+    " vim-r-plugin {{{2
 
     filetype plugin on
     filetype indent on
     " Change Leader and LocalLeader keys:
     let maplocalleader = ","
-    let mapleader = ";"
+    let mapleader = ","
     "vim-R-pluginでアンダースコアを矢印に??何かうまくできない
     "set <M-->=^[-
     "let vimrplugin_assign_map = "<M-->"
@@ -309,7 +309,7 @@ function! s:ExecPy()
     " https://github.com/c9s/perlomni.vim
     let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-    "" Vim-LaTeX {{{2
+    " Vim-LaTeX {{{2
 
     filetype plugin on
     filetype indent on
