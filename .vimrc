@@ -3,7 +3,6 @@
 ""vimrc整理術 {{{2
 " モードラインを有効にする
 set modeline
-"
 " 3行目までをモードラインとして検索する
 set modelines=3
 ""---------------------------------------------------------------
@@ -116,9 +115,6 @@ augroup vimrc-auto-mkdir
         endif
     endfunction  
 augroup END
-
-
-
 "python {{{1
 "----------------------------------------------------------------
 autocmd FileType python setl autoindent
@@ -135,7 +131,7 @@ function! s:ExecPy()
 
     "KEY BIND {{{1 
     "----------------------------------------------------------------
-
+    nmap <F1> ;VimFiler<CR>
     nmap <F2> :VimShell<CR>
     nmap <F6> :vsplit<CR>
     nmap <F7> :split<CR>
@@ -153,7 +149,6 @@ function! s:ExecPy()
     "カーソルキーで行末／行頭の移動可能に設定。
     set whichwrap=b,s,[,],<,>
 
-
     "plugin {{{1
     "----------------------------------------------------
     "NeoBundle {{{2
@@ -170,13 +165,11 @@ function! s:ExecPy()
     NeoBundle 'https://github.com/h1mesuke/unite-outline.git'
     NeoBundle 'Shougo/unite.vim'
     NeoBundle 'Shougo/vimfiler'
-    "NeoBundle 'Shougo/vimproc.git'
     NeoBundle 'Shougo/vimproc.git'
     NeoBundle 'Shougo/vimshell.git'
     "NeoBundle 'jcfaria/Vim-R-plugin'
     NeoBundle 'vim-scripts/Vim-R-plugin'
     NeoBundle 'ervandew/screen'
-    " NeoBundle 'https://github.com/jcf/vim-latex.git'
     NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
     " NeoBundle 'Smooth-Scroll'
     NeoBundle 'eregex.vim'
@@ -217,7 +210,7 @@ function! s:ExecPy()
     filetype indent on
     " Change Leader and LocalLeader keys:
     let maplocalleader = ","
-     let mapleader = ";"
+    let mapleader = ";"
     "vim-R-pluginでアンダースコアを矢印に??何かうまくできない
     "set <M-->=^[-
     "let vimrplugin_assign_map = "<M-->"
