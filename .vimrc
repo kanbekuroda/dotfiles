@@ -31,9 +31,19 @@ syntax on
 set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
+" スワップファイル.swpの出力先
+set directory=~/.vim/tmp
+" チルダファイル~の出力先
+set nobackup
+" if has("vms")
+"     set nobackup		" do not keep a backup file, use versions instead
+" else
+"     set backup		" keep a backup file
+" endif
+
+
 "クリップボードにコピー
 set clipboard+=unnamed,autoselect
-
 "画面最後の行をできる限り表示する。
 set display=lastline
 
@@ -55,11 +65,6 @@ if v:progname =~? "evim"
 endif 
 set backspace=indent,eol,start
 
-if has("vms")
-    set nobackup		" do not keep a backup file, use versions instead
-else
-    set backup		" keep a backup file
-endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -127,7 +132,7 @@ function! s:ExecPy()
 
     "KEY BIND {{{1 
     "----------------------------------------------------------------
-    nmap <F1> ;VimFiler<CR>
+    nmap <F1> :VimFiler<CR>
     nmap <F2> :VimShell<CR>
     nmap <F6> :vsplit<CR>
     nmap <F7> :split<CR>
@@ -153,9 +158,11 @@ function! s:ExecPy()
 
     if has('vim_starting')
         set runtimepath+=~/.vim/bundle/neobundle.vim
-        call neobundle#rc(expand('~/.vim/bundle/'))
+        "call neobundle#rc(expand('~/.vim/bundle/'))
+        call neobundle#begin(expand('~/.vim/bundle/'))
     endif
     NeoBundleFetch 'Shougo/neobundle.vim'
+    call neobundle#end()
     NeoBundle 'Shougo/neocomplete.vim'
     NeoBundle 'ervandew/screen'
     NeoBundle 'https://github.com/h1mesuke/unite-outline.git'
