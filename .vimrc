@@ -37,18 +37,14 @@ set clipboard+=unnamed,autoselect
 "画面最後の行をできる限り表示する。
 set display=lastline
 
-" カーソル行をハイライト
-"   set cursorline
-"  カレントウィンドウにのみ罫線を引く
-
 augroup cch
     autocmd! cch
 augroup END
-set cursorline
-set cursorcolumn
-hi clear CursorLine
-hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
+"set cursorline
+"set cursorcolumn
+"hi clear CursorLine
+"hi CursorLine gui=underline
+"highlight CursorLine ctermbg=black guibg=black
 
 filetype off
 filetype plugin indent off
@@ -340,13 +336,15 @@ function! s:ExecPy()
                 \'Citation %.%# undefined'."\n".
                 \'LaTeX Font Warning'."\n"
     let g:Tex_IgnoreLevel = 8
-    "" quickrun
+
+    " quickrun {{{2
+    " let g:quickrun_config.tex = {'command' : 'autolatex'}
+
     let g:quickrun_config = {
-                \   'tex': {
-                \       'command': 'ptex2pdf',
-                \       'exec': ['%c -l -u -ot "-synctex=1 -interaction=nonstopmode" %s', 'open %s:r.pdf']
-                \   },
-                \}
+                    \   'tex': {
+                    \       'command': 'autolatex'
+                    \   }
+                    \}
 
     " color {{{1
     "===============================================
