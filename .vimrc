@@ -32,6 +32,7 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
 " スワップファイル.swpの出力先
+set swapfile
 set directory=~/.vim/tmp
 " チルダファイル~の出力先
 set nobackup
