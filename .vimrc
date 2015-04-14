@@ -220,7 +220,6 @@ function! s:ExecPy()
     "let vimrplugin_assign_map = "<M-->"
     "vim-R-pluginでアンダースコアを矢印にをやめる?？何かわからけど，これでアンダースコアうてるようになった
     let vimrplugin_assign = 0
-    let vimrplugin_term = "~/Applications/iTerm.app/Contents/MacOS/iTerm" 
     let vimrplugin_term_cmd = "~/Applications/iTerm.app/Contents/MacOS/iTerm -t R"
     "If you prefer to split it vertically:
     let vimrplugin_vsplit = 1
