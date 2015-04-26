@@ -48,6 +48,10 @@ set clipboard+=unnamed,autoselect
 "画面最後の行をできる限り表示する。
 set display=lastline
 
+"スペルチェックを有効にする(ただし日本語は除外する)
+set spelllang+=cjk
+set spell 
+
 augroup cch
     autocmd! cch
 augroup END
