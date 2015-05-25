@@ -3,6 +3,7 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+export GS_LIB=/usr/local/share/fonts  # ghostscript
 
 # PATH
 export PATH=.:~/bin:/opt/local/bin:$PATH
