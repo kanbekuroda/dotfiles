@@ -175,8 +175,9 @@ function! s:ExecPy()
     NeoBundle 'Shougo/vimfiler'
     NeoBundle 'Shougo/vimproc.git'
     NeoBundle 'Shougo/vimshell.git'
-    "NeoBundle 'jcfaria/Vim-R-plugin'
-    NeoBundle 'vim-scripts/Vim-R-plugin'
+    NeoBundle 'jalvesaq/R-Vim-runtime'
+    "NeoBundle 'jcfaria/Vim-R-plugin' "development version
+    NeoBundle 'vim-scripts/Vim-R-plugin' "stable version
     NeoBundle 'ervandew/screen'
     NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
     " NeoBundle 'Smooth-Scroll'

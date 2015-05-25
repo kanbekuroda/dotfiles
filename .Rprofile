@@ -69,7 +69,7 @@ if(interactive()){
     # Get startup messages of three packages and set Vim as R pager:
     options(setwidth.verbose = 1,
             colorout.verbose = 1,
-            vimcom.verbose = 1
+            vimcom.verbose = -1
     #        pager = "vimrpager")
             )
     # Use the text based web browser w3m to navigate through R docs:
