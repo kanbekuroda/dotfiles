@@ -162,7 +162,6 @@ function! s:ExecPy()
         call neobundle#begin(expand('~/.vim/bundle/'))
     endif
     NeoBundleFetch 'Shougo/neobundle.vim'
-    call neobundle#end()
     NeoBundle 'Shougo/neocomplete.vim'
     NeoBundle 'ervandew/screen'
     NeoBundle 'https://github.com/h1mesuke/unite-outline.git'
@@ -196,17 +195,18 @@ function! s:ExecPy()
 
     " vimproc
     let vimproc_updcmd = has('win64') ?
-          \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
+                \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
     execute "NeoBundle 'Shougo/vimproc.vim'," . string({
-          \ 'build' : {
-          \     'windows' : vimproc_updcmd,
-          \     'cygwin' : 'make -f make_cygwin.mak',
-          \     'mac' : 'make -f make_mac.mak',
-          \     'unix' : 'make -f make_unix.mak',
-          \    },
-          \ })
+                \ 'build' : {
+                \     'windows' : vimproc_updcmd,
+                \     'cygwin' : 'make -f make_cygwin.mak',
+                \     'mac' : 'make -f make_mac.mak',
+                \     'unix' : 'make -f make_unix.mak',
+                \    },
+                \ })
 
-        "let vimplugin_screenplugin =0
+    "let vimplugin_screenplugin =0
+    call neobundle#end()
 
     " vim-r-plugin {{{2
 
@@ -346,10 +346,10 @@ function! s:ExecPy()
     " let g:quickrun_config.tex = {'command' : 'autolatex'}
 
     let g:quickrun_config = {
-                    \   'tex': {
-                    \       'command': 'autolatex'
-                    \   }
-                    \}
+                \   'tex': {
+                \       'command': 'autolatex'
+                \   }
+                \}
 
     " color {{{1
     "===============================================
