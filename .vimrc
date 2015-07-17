@@ -33,15 +33,10 @@ set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
 " スワップファイル.swpの出力先
 set swapfile
-set directory=~/.vim/tmp
+set directory=~/.vim/swp
 " チルダファイル~の出力先
 set nobackup
-" if has("vms")
-"     set nobackup		" do not keep a backup file, use versions instead
-" else
-"     set backup		" keep a backup file
-" endif
-
+set backupdir=~/.vim/backup 
 
 "クリップボードにコピー
 set clipboard+=unnamed,autoselect
