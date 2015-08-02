@@ -194,16 +194,15 @@ function! s:ExecPy()
     NeoBundle 'scrooloose/nerdtree'
 
     " vimproc
-    let vimproc_updcmd = has('win64') ?
-                \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
-    execute "NeoBundle 'Shougo/vimproc.vim'," . string({
-                \ 'build' : {
-                \     'windows' : vimproc_updcmd,
-                \     'cygwin' : 'make -f make_cygwin.mak',
-                \     'mac' : 'make -f make_mac.mak',
-                \     'unix' : 'make -f make_unix.mak',
-                \    },
-                \ })
+    NeoBundle 'Shougo/vimproc.vim', {
+    \ 'build' : {
+    \     'windows' : 'tools\\update-dll-mingw',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'linux' : 'make',
+    \     'unix' : 'gmake',
+    \    },
+    \ }
 
     "let vimplugin_screenplugin =0
     call neobundle#end()
