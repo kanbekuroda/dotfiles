@@ -133,7 +133,8 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vim='vim --servername VIM'
+#alias vim='vim --servername VIM'
+alias vim='/opt/local/bin/vim --servername VIM'
  
 alias mkdir='mkdir -p'
  
