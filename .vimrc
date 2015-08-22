@@ -133,19 +133,6 @@ function! s:ExecPy()
     "KEY BIND {{{1 
     "----------------------------------------------------------------
     nmap <F1> :VimFiler<CR>
-    nmap <F2> :VimShell<CR>
-    nmap <F6> :vsplit<CR>
-    nmap <F7> :split<CR>
-    nmap <F3> :only<CR>
-
-    nnoremap : ;
-    nnoremap ; :
-
-    "カーソルを表示行で移動する。物理行移動は<C-n>,<C-p>
-    nnoremap j gj
-    nnoremap k gk
-    nnoremap <Down> gj
-    nnoremap <Up>   gk
 
     "カーソルキーで行末／行頭の移動可能に設定。
     set whichwrap=b,s,[,],<,>
