@@ -1,13 +1,13 @@
-"General Settings {{{1
+" General Settings {{{1
 "----------------------------------------------------------------
-""vimrc整理術 {{{2
+""vimrc整理用にモードラインを有効化 {{{2
 " モードラインを有効にする
 set modeline
-" 3行目までをモードラインとして検索する
+" 上下3行目までをモードラインとして検索する
 set modelines=3
 ""---------------------------------------------------------------
 
-"" General Settings {{{2
+"" その他のGeneral Settings {{{2
 set nocompatible
 
 set t_Co=256
@@ -29,7 +29,7 @@ set statusline=%f\ %m%r%h%w\ [FMT=%{&ff}]\ [ENC=%{&fileencoding}]\ [TYP=%Y]%=(Li
 syntax on
 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 
 " スワップファイル.swpの出力先
 set swapfile
@@ -182,14 +182,14 @@ function! s:ExecPy()
 
     " vimproc
     NeoBundle 'Shougo/vimproc.vim', {
-    \ 'build' : {
-    \     'windows' : 'tools\\update-dll-mingw',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'linux' : 'make',
-    \     'unix' : 'gmake',
-    \    },
-    \ }
+                \ 'build' : {
+                \     'windows' : 'tools\\update-dll-mingw',
+                \     'cygwin' : 'make -f make_cygwin.mak',
+                \     'mac' : 'make -f make_mac.mak',
+                \     'linux' : 'make',
+                \     'unix' : 'gmake',
+                \    },
+                \ }
 
     "let vimplugin_screenplugin =0
     call neobundle#end()
