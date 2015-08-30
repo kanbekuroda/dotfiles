@@ -29,7 +29,7 @@ set statusline=%f\ %m%r%h%w\ [FMT=%{&ff}]\ [ENC=%{&fileencoding}]\ [TYP=%Y]%=(Li
 syntax on
 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 " スワップファイル.swpの出力先
 set swapfile
