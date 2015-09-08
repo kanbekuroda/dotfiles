@@ -47,6 +47,9 @@ set display=lastline
 set spelllang+=cjk
 set spell 
 
+" IMEをオフにする
+set imdisable
+
 augroup cch
     autocmd! cch
 augroup END
