@@ -181,7 +181,6 @@ function! s:ExecPy()
     NeoBundle 'smartword'
     NeoBundle 'mitechie/pyflakes-pathogen'
     NeoBundle 'altercation/vim-colors-solarized'
-    NeoBundle 'scrooloose/nerdtree'
 
     " vimproc
     NeoBundle 'Shougo/vimproc.vim', {
