@@ -181,7 +181,6 @@ function! s:ExecPy()
     NeoBundle 'smartword'
     NeoBundle 'mitechie/pyflakes-pathogen'
     NeoBundle 'altercation/vim-colors-solarized'
-    NeoBundle 'scrooloose/nerdtree'
 
     " vimproc
     NeoBundle 'Shougo/vimproc.vim', {
@@ -212,6 +211,9 @@ function! s:ExecPy()
     let vimrplugin_term_cmd = "~/Applications/iTerm.app/Contents/MacOS/iTerm -t R"
     "If you prefer to split it vertically:
     let vimrplugin_vsplit = 1
+    " like ess indents
+    let r_indent_ess_comments = 1
+    let r_indent_ess_compatible = 1
 
     " neocomplete {{{2
     "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
