@@ -212,7 +212,7 @@ function! s:ExecPy()
     "If you prefer to split it vertically:
     let vimrplugin_vsplit = 1
     " like ess indents
-    let r_indent_ess_comments = 1
+    let r_indent_ess_comments = 0
     let r_indent_ess_compatible = 1
 
     " neocomplete {{{2
