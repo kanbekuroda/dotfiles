@@ -200,20 +200,13 @@ function! s:ExecPy()
 
     filetype plugin on
     filetype indent on
-    " Change Leader and LocalLeader keys:
     let maplocalleader = ","
     let mapleader = ","
-    "vim-R-pluginでアンダースコアを矢印に??何かうまくできない
-    "set <M-->=^[-
-    "let vimrplugin_assign_map = "<M-->"
-    "vim-R-pluginでアンダースコアを矢印にをやめる?？何かわからけど，これでアンダースコアうてるようになった
-    let vimrplugin_assign = 0
+    "Disable converting '_' into ' <- '
+    let vimrplugin_assign = 0  
     let vimrplugin_term_cmd = "~/Applications/iTerm.app/Contents/MacOS/iTerm -t R"
     "If you prefer to split it vertically:
     let vimrplugin_vsplit = 1
-    " like ess indents
-    let r_indent_ess_comments = 1
-    let r_indent_ess_compatible = 1
 
     " neocomplete {{{2
     "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
