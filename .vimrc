@@ -163,7 +163,7 @@ function! s:ExecPy()
     "NeoBundle 'jcfaria/Vim-R-plugin' "development version
     NeoBundle 'vim-scripts/Vim-R-plugin' "stable version
     NeoBundle 'ervandew/screen'
-    NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+    NeoBundle 'vim-latex/vim-latex'
     " NeoBundle 'Smooth-Scroll'
     NeoBundle 'eregex.vim'
     NeoBundle 'tyru/open-browser.vim'
