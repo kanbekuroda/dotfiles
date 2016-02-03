@@ -172,7 +172,7 @@ function! s:ExecPy()
     NeoBundle 'tpope/vim-rails'
     NeoBundle 'taglist.vim'
     NeoBundle 'Pydiction'
-    NeoBundle 'errormarker.vim'
+    " NeoBundle 'errormarker.vim'
     NeoBundle 'nginx.vim'
     NeoBundle 'kchmck/vim-coffee-script'
     NeoBundle 'vtreeexplorer'
