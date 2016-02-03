@@ -207,6 +207,9 @@ function! s:ExecPy()
     let vimrplugin_term_cmd = "~/Applications/iTerm.app/Contents/MacOS/iTerm -t R"
     "If you prefer to split it vertically:
     let vimrplugin_vsplit = 1
+    "Indent settings
+    let r_indent_align_args = 0
+
 
     " neocomplete {{{2
     "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
