@@ -1,6 +1,14 @@
 
 .DS_Store
+
+doc/
+
+*.gif
+*.png
+*.jpg
+*.jpeg
 *.pdf
+
 *.csv
 *.dat
 *.RData
