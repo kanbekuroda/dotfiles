@@ -167,7 +167,7 @@ function! s:ExecPy()
     " NeoBundle 'Smooth-Scroll'
     NeoBundle 'eregex.vim'
     NeoBundle 'tyru/open-browser.vim'
-    NeoBundle 'thinca/vim-quickrun'
+    " NeoBundle 'thinca/vim-quickrun'
     NeoBundle 'vim-ruby/vim-ruby'
     NeoBundle 'tpope/vim-rails'
     NeoBundle 'taglist.vim'
