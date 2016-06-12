@@ -1,5 +1,8 @@
 #okuda https://oku.edu.mie-u.ac.jp/~okumura/stat/Rprofile.html
-#options(repos="http://cran.md.tsukuba.ac.jp")
+
+# install.packages()のレポジトリ
+options(repos="https://cloud.r-project.org/")
+
 if (capabilities("aqua")) {
     options(device="quartz")
 }
