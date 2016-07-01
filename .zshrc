@@ -5,7 +5,7 @@
 export LANG=ja_JP.UTF-8
 
 # PATH
-export PATH=.:~/bin:/opt/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/opt/local/bin:$PATH
  
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -133,7 +133,6 @@ alias ll='ls -l'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias vim='vim --servername VIM'
  
 alias mkdir='mkdir -p'
  
