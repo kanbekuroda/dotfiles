@@ -159,8 +159,8 @@ function! s:ExecPy()
     NeoBundle 'Shougo/vimfiler'
     NeoBundle 'Shougo/vimproc.git'
     NeoBundle 'Shougo/vimshell.git'
-    NeoBundle 'jalvesaq/R-Vim-runtime'
-    "NeoBundle 'jcfaria/Vim-R-plugin' "development version
+    " NeoBundle 'jalvesaq/R-Vim-runtime'
+    " NeoBundle 'jcfaria/Vim-R-plugin' "development version
     NeoBundle 'vim-scripts/Vim-R-plugin' "stable version
     NeoBundle 'ervandew/screen'
     NeoBundle 'vim-latex/vim-latex'
@@ -209,6 +209,8 @@ function! s:ExecPy()
     let vimrplugin_vsplit = 1
     "Indent settings
     let r_indent_align_args = 0
+    let r_indent_ess_comments = 0
+    let r_indent_ess_compatible = 0
 
 
     " neocomplete {{{2
