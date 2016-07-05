@@ -100,6 +100,8 @@ let R_vsplit = 1
 " Split help windows horizontally
 let R_nvimpager = "horizontal"
 
+" I prefer do not have the arguments of functions aligned
+let r_indent_align_args = 0
 
 "-------------------------------------------------------------------------
 " Gneral Settings
