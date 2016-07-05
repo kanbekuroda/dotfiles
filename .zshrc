@@ -3,6 +3,7 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+export XDG_CONFIG_HOME="$HOME/.config" # neovim用
 
 # PATH
 export PATH=/usr/local/bin:/usr/bin:/opt/local/bin:$PATH
@@ -183,10 +184,10 @@ fi
 #}}}
 
 # 環境別条件分岐設定#{{{
-which-s() { whence -p ${1+"$1"} >/dev/null; }
-if which-s sysctl; then
-    export TERM=screen-256color
-else
-    export TERM=xterm-256color
-fi
+# which-s() { whence -p ${1+"$1"} >/dev/null; }
+# if which-s sysctl; then
+#     export TERM=screen-256color
+# else
+export TERM=xterm-256color
+# fi
 #}}}
