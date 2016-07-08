@@ -51,7 +51,7 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-"Settings for solarized
+" Settings for solarized
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
@@ -59,21 +59,6 @@ let g:solarized_termcolors=256
 "User Defined
 set mouse=a "マウスによる操作を有効化
 set backspace=indent,eol,start "Deleteキー有効化
-
-inoremap {} {}<Esc>i
-inoremap [] []<Esc>i
-inoremap () ()<Esc>i
-inoremap "" ""<Esc>i
-inoremap '' ''<Esc>i
-inoremap <> <><Esc>i
-
-vnoremap {} di{<Esc>pa}<Esc>
-vnoremap [] di[<Esc>pa]<Esc>
-vnoremap () di(<Esc>pa)<Esc>
-vnoremap "" di"<Esc>pa"<Esc>
-vnoremap '' di'<Esc>pa'<Esc>
-vnoremap <> di<<Esc>pa><Esc>
-
 
 "---------------------------------------------------------------------------
 " Nvim-R
