@@ -40,7 +40,7 @@ endif
 call dein#call_hook('source')
 call dein#call_hook('post_source')
 
-syntax enable
+syntax on
 filetype plugin indent on
 
 
