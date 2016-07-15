@@ -6,7 +6,7 @@ export LANG=ja_JP.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config" # neovim用
 
 # PATH
-export PATH=/usr/local/bin:/opt/local/bin/:$PATH
+export PATH=/usr/local/bin:$PATH
  
 # 色を使用出来るようにする
 autoload -Uz colors
