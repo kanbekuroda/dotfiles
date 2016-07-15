@@ -240,10 +240,6 @@ repo = 'choplin/unite-spotlight'
 on_source = 'unite.vim'
 
 [[plugins]]
-repo = 'kannokanno/unite-todo'
-on_source = 'unite.vim'
-
-[[plugins]]
 repo = 'ujihisa/unite-colorscheme'
 on_source = 'unite.vim'
 
