@@ -5,10 +5,10 @@ let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " dein.vim がなければ github から落としてくる
 if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+    if !isdirectory(s:dein_repo_dir)
+	execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
 let g:dein#install_progress_type = 'title'
@@ -16,31 +16,33 @@ let g:dein#install_message_type = 'none'
 let g:dein#enable_notification = 1
 " 設定開始
 if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+    call dein#begin(s:dein_dir)
 
-  " プラグインリストを収めた TOML ファイル
-  let s:toml      = '~/.vim/dein.toml'
-  let s:lazy_toml = '~/.vim/dein_lazy.toml'
+    " プラグインリストを収めた TOML ファイル
+    let s:toml      = '~/.vim/dein.toml'
+    let s:lazy_toml = '~/.vim/dein_lazy.toml'
 
 
-  " TOML を読み込み、キャッシュしておく
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+    " TOML を読み込み、キャッシュしておく
+    call dein#load_toml(s:toml,      {'lazy': 0})
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  " 設定終了
-  call dein#end()
-  call dein#save_state()
+    " 設定終了
+    call dein#end()
+    call dein#save_state()
 endif
 
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
-  call dein#install()
+    call dein#install()
 endif
+
+call dein#call_hook('source')
+call dein#call_hook('post_source')
+
+syntax enable
 filetype plugin indent on
 
-set number
-
-syntax on
 
 "settings for vim-powerline with powerline project
 "python from powerline.vim import setup as powerline_setup
@@ -63,6 +65,7 @@ set backspace=indent,eol,start "Deleteキー有効化
 "---------------------------------------------------------------------------
 " Nvim-R
 "
+" TODO: ほんとはたぶん'dein_lazy.toml'に書くべきだけどなぜかうまくいかない
 
 " Change Leader and LocalLeader keys:
 let maplocalleader = ","
@@ -70,9 +73,9 @@ let mapleader = ";"
 
 " Use Ctrl+Space to do omnicompletion:
 if has("gui_running")
-	inoremap <C-Space> <C-x><C-o>
+    inoremap <C-Space> <C-x><C-o>
 else
-	inoremap <Nul> <C-x><C-o>
+    inoremap <Nul> <C-x><C-o>
 endif
 
 " Press the space bar to send lines and selection to R:
@@ -88,9 +91,13 @@ let R_nvimpager = "horizontal"
 " I prefer do not have the arguments of functions aligned
 let r_indent_align_args = 0
 
+" disable converting '_' to '->' feature
+let R_assign = 0  
 "-------------------------------------------------------------------------
 " Gneral Settings
 "
+
+set number
 
 " Highlight the last searched pattern:
 set hlsearch
