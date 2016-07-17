@@ -102,4 +102,7 @@ set incsearch
 " spaces:
 set sw=4
 
-set infercase           " 補完時に大文字小文字を区別しない
+" 補完時に大文字小文字を区別しない
+set infercase  
+
+set autoindent
