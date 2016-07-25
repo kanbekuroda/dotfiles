@@ -78,10 +78,6 @@ else
     inoremap <Nul> <C-x><C-o>
 endif
 
-" Press the space bar to send lines and selection to R:
-vmap <Space> <Plug>RDSendSelecion
-nmap <Space> <Plug>RDSendLine
-
 " Split R windows vertically
 let R_vsplit = 1
 
