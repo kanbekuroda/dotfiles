@@ -242,7 +242,6 @@ on_source = 'unite.vim'
 repo = 'ujihisa/unite-colorscheme'
 on_source = 'unite.vim'
 
-
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
@@ -252,7 +251,6 @@ on_ft = 'snippet'
 [[plugins]]
 repo= 'scrooloose/syntastic'
 on_ft = ['c','r','rmd','php','go','ruby','python','tex']
-
 
 [[plugins]]
 repo= 'qtmplsel.vim'
@@ -290,7 +288,6 @@ hook_add = 'nmap <silent> <Leader>r <Plug>(quickrun)'
 repo = 'jalvesaq/Nvim-R'
 on_ft = ['rmd','r']
 hook_source = '''
-"n-vim
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 set infercase
@@ -306,14 +303,12 @@ on_ft = ['tex']
 hook_source = '''
 let g:vimtex_latexmk_continuous = 1
 let g:vimtex_latexmk_background = 1
-let g:vimtex_latexmk_continuous = 1
-let g:vimtex_latexmk_background = 1
-let g:vimtex_latexmk_options = '-pdfdvi'
+let g:vimtex_latexmk_options = '-c'
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
 
 " This adds a callback hook that updates Skim after compilation
-    let g:vimtex_latexmk_callback_hooks = ['UpdateSkim']
+let g:vimtex_latexmk_callback_hooks = ['UpdateSkim']
 function! UpdateSkim(status)
     if !a:status | return | endif
     let l:out = b:vimtex.out()
