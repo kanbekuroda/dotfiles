@@ -32,10 +32,11 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-" もし、未インストールものものがあったらインストール
+" もし、未インストールのものがあったらインストール
 if dein#check_install()
   call dein#install()
 endif
+
 filetype plugin indent on
 
 set number
@@ -59,34 +60,6 @@ let g:solarized_termcolors=256
 "User Defined
 set mouse=a "マウスによる操作を有効化
 set backspace=indent,eol,start "Deleteキー有効化
-
-"---------------------------------------------------------------------------
-" Nvim-R
-"
-
-" Change Leader and LocalLeader keys:
-let maplocalleader = ","
-let mapleader = ";"
-
-" Use Ctrl+Space to do omnicompletion:
-if has("gui_running")
-	inoremap <C-Space> <C-x><C-o>
-else
-	inoremap <Nul> <C-x><C-o>
-endif
-
-" Press the space bar to send lines and selection to R:
-vmap <Space> <Plug>RDSendSelecion
-nmap <Space> <Plug>RDSendLine
-
-" Split R windows vertically
-let R_vsplit = 1
-
-" Split help windows horizontally
-let R_nvimpager = "horizontal"
-
-" I prefer do not have the arguments of functions aligned
-let r_indent_align_args = 0
 
 "-------------------------------------------------------------------------
 " Gneral Settings
