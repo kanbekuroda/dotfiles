@@ -301,20 +301,27 @@ hook_add = 'nmap <silent> <Leader>r <Plug>(quickrun)'
 [[plugins]]
 repo = 'jalvesaq/Nvim-R'
 on_ft = ['rmd','r']
-hook_source = '''
-vmap <Space> <Plug>RDSendSelection
-nmap <Space> <Plug>RDSendLine
-set infercase
-set hlsearch
-set incsearch
-"let R_in_buffer = 0
+hook_post_source = '''
+" Change Leader and LocalLeader keys:
+let maplocalleader = ","
+let mapleader = ";"
+" Use Ctrl+Space to do omnicompletion:
+if has("gui_running")
+	inoremap <C-Space> <C-x><C-o>
+else
+	inoremap <Nul> <C-x><C-o>
+endif
 let R_vsplit = 1
+" If you need to type many object names with underscores, you may want to change
+" the value R_assign to 2. Then, you will have to type two `_` to get
+" them converted into `<-`.
+let R_assign = 2
 '''
 
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = ['tex']
-hook_source = '''
+hook_post_source = '''
 let g:vimtex_latexmk_background = 1
 " let g:vimtex_latexmk_options = '-c'
 let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
