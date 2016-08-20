@@ -1,4 +1,4 @@
-#okuda https://oku.edu.mie-u.ac.jp/~okumura/stat/Rprofile.html
+# 参考: https://oku.edu.mie-u.ac.jp/~okumura/stat/Rprofile.html
 
 # install.packages()のレポジトリ
 options(repos="https://cloud.r-project.org/")
@@ -74,16 +74,16 @@ setHook(packageEvent("lattice", "attach"),
 if(interactive()){
 # Suggested libraries:
     library(colorout)
-    library(setwidth)
+	library(setwidth)
 
 # Use text based web browser to navigate through R docs after help.start()
 # if you cannot run a graphical web browser (e.g. when you are in the
 # Linux console):
-    if(Sys.getenv("DISPLAY") == ""){
-	if(Sys.getenv("TMUX") != "")
-	    options(browser = function(u) system(paste0("tmux new-window 'w3m ", u, "'")))
-	else if(Sys.getenv("NVIMR_TMPDIR") != "")
-	    options(browser = function(u) .C("nvimcom_msg_to_nvim",
-			paste0('StartTxtBrowser("w3m", "', u, '")')))
-    }
+	if(Sys.getenv("DISPLAY") == ""){
+	    if(Sys.getenv("TMUX") != "")
+		options(browser = function(u) system(paste0("tmux new-window 'w3m ", u, "'")))
+	    else if(Sys.getenv("NVIMR_TMPDIR") != "")
+		options(browser = function(u) .C("nvimcom_msg_to_nvim",
+			    paste0('StartTxtBrowser("w3m", "', u, '")')))
+	}
 }
