@@ -161,15 +161,15 @@ fi
  
 ########################################
 # OS 別の設定
-case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-        export CLICOLOR=1
-        ;;
-    linux*)
-        #Linux用の設定
-	alias ls ='ls -GF'
-        ;;
+case "${OSTYPE}" in
+darwin*)
+  # Mac
+  alias ls="ls -GF"
+  ;;
+linux*)
+  # Linux
+  alias ls='ls -F --color'
+  ;;
 esac
 
 # vim:set ft=zsh:
