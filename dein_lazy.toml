@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
 on_map = [['n', '<Plug>']]
-    hook_add = '''
+hook_add = '''
     nmap [Space]s  <Plug>(vimshell_switch)
     nnoremap <silent> \is :VimShell<CR>
     nnoremap <silent> \isp :VimShellPop<CR>
@@ -15,10 +15,10 @@ on_map = [['n', '<Plug>']]
     vnoremap \ss :VimShellSendString<CR>
     " \ss: 非同期で開いたインタプリタに現在の行を評価させる
     nnoremap <silent> \ss <S-v>:VimShellSendString<CR>"}}}
-    '''
+'''
     hook_source = '''
     "source ~/.vim/rc/plugins/vimshell.rc.vim
-    '''
+'''
 
 [[plugins]]
 repo = 'Shougo/unite.vim'
@@ -59,8 +59,7 @@ imap <C-k><C-i> <Plug>(neosnippet_start_unite_snippet)
     noremap <C-k><C-p> :<C-u>Unite spotlight<CR>
     " Outline
     noremap <C-k><C-o> :<C-u>Unite outline<CR>
-    '''
-
+'''
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
@@ -162,8 +161,7 @@ inoremap <expr><C-e> neocomplete#cancel_popup()
     "\ '[[:alnum:].\\]\+'
     "let g:neocomplete#sources#omni#functions.rmd =
     "\ 'rcomplete#CompleteR'
-    '''
-
+'''
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -217,7 +215,7 @@ let g:deoplete#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 
     " Let <Tab> also do completion
     inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
-    '''
+'''
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'
@@ -244,17 +242,29 @@ on_source = 'unite.vim'
 repo = 'ujihisa/unite-colorscheme'
 on_source = 'unite.vim'
 
-
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
+hook_add = '''
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+'''
 
 [[plugins]]
 repo= 'scrooloose/syntastic'
 on_ft = ['c','r','rmd','php','go','ruby','python','tex']
-
 
 [[plugins]]
 repo= 'qtmplsel.vim'
@@ -287,90 +297,3 @@ let g:vimfiler_marked_file_icon = '*'
 repo= 'thinca/vim-quickrun'
 on_map = [['n', '<Plug>']]
 hook_add = 'nmap <silent> <Leader>r <Plug>(quickrun)'
-
-[[plugins]]
-repo = 'vim-latex/vim-latex'
-on_ft = 'tex'
-depends = 'vim-quickrun'
-hook_add = '''
-
-"Settings for vim-latex
-set shellslash
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Imap_UsePlaceHolders = 1 
-let g:Imap_DeleteEmptyPlaceHolders = 1 
-let g:Imap_StickyPlaceHolders = 0 
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_FormatDependency_pdf = 'pdf' "COut44
-"let g:Tex_FormatDependency_pdf = 'dvi,pdf' "Cin
-let g:Tex_FormatDependency_ps = 'dvi,ps'
-let g:Tex_CompileRule_pdf = '/usr/texbin/ptex2pdf -l -ot "-synctex=1 -interaction=nonstopmode -file-line-error-style" $*'
-let g:Tex_BibtexFlavor = '/usr/texbin/pbibtex'
-let g:Tex_ViewRule_pdf = '/usr/bin/open -a Preview.app'
-let g:Tex_ViewRule_ps = '/usr/bin/open'
-let g:Tex_ViewRule_dvi = '/usr/bin/open'
-
-let g:quickrun_config = {
-    \   "_" : {
-	\       "runner" : "vimproc",
-	\       "runner/vimproc/updatetime" : 1000,
-	\   },
-    \}
-let g:quickrun_config['tex'] = {
-    \   'command' : 'latexmk',
-    \   'outputter' : 'error',
-    \   'outputter/error/error' : 'quickfix',
-    \   'cmdopt': '-pdfdvi',
-    \   'exec': ['%c %o %s']
-	\ }
-'''
-
-    [[plugins]]
-    repo = 'jalvesaq/Nvim-R'
-	on_ft = ['rmd','r']
-	hook_source = '''
-	"n-vim
-	vmap <Space> <Plug>RDSendSelection
-	nmap <Space> <Plug>RDSendLine
-	set infercase
-	set hlsearch
-	set incsearch
-	"let R_in_buffer = 0
-	let R_vsplit = 1
-	'''
-
-	[[plugins]]
-	repo = 'lervag/vimtex'
-	    on_ft = ['tex']
-	    hook_source = '''
-	    let g:vimtex_latexmk_continuous = 1
-	    let g:vimtex_latexmk_background = 1
-	    let g:vimtex_latexmk_continuous = 1
-	    let g:vimtex_latexmk_background = 1
-	    let g:vimtex_latexmk_options = '-pdfdvi'
-	    let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
-	    let g:vimtex_view_general_options = '-r @line @pdf @tex'
-
-	    " This adds a callback hook that updates Skim after compilation
-	    let g:vimtex_latexmk_callback_hooks = ['UpdateSkim']
-	    function! UpdateSkim(status)
-	    if !a:status | return | endif
-		let l:out = b:vimtex.out()
-		    let l:tex = expand('%:p')
-		    let l:cmd = [g:vimtex_view_general_viewer, '-r']
-		    if !empty(system('pgrep Skim'))
-			call extend(l:cmd, ['-g'])
-			    endif
-			    if has('nvim')
-				call jobstart(l:cmd + [line('.'), l:out, l:tex])
-				    elseif has('job')
-				    call job_start(l:cmd + [line('.'), l:out, l:tex])
-			    else
-				call system(join(l:cmd + [line('.'), shellescape(l:out), shellescape(l:tex)], ' '))
-				    endif
-				    endfunction
-				    '''
-				    [[plugins]]
-				    repo = 'cespare/vim-toml'
-					on_ft = 'toml'
