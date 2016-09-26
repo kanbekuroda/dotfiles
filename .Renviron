@@ -1,0 +1,3 @@
+# JIT Compilation in R
+R_COMPILE_PKGS=TRUE
+R_ENABLE_JIT=3
