@@ -1,0 +1,18 @@
+[http]
+	sslVerify = false
+[user]
+	name = hayatowatanabe
+	email = hayato.watanabe@ruri.waseda.jp
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /home/lab/h810/.gitignore_global
+	editor = nvim -c \"set fenc=utf-8\"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /home/lab/h810/.stCommitMsg
