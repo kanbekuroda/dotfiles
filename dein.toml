@@ -67,7 +67,8 @@ endif
 " Type two `_` to get them converted into `<-`.
 let R_assign = 2
 " Split R windows vertically
-let R_vsplit = 1
+let R_rconsole_width = 57
+let R_min_editor_width = 18
 " Split help windows horizontally
 let R_nvimpager = "horizontal"
 " I prefer do not have the arguments of functions aligned
