@@ -89,5 +89,3 @@ if(interactive()){
 			    paste0('StartTxtBrowser("w3m", "', u, '")')))
 	}
 }
-
-

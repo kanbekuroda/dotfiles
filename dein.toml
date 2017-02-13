@@ -80,8 +80,9 @@ on_ft = ['tex']
 hook_add = '''
 let g:vimtex_latexmk_background = 1
 " let g:vimtex_latexmk_options = '-c'
-let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_viewer = '~/Applications/Skim.app/Contents/SharedSupport/displayline'
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
+let g:vimtex_fold_enabled = 1
 
 " This adds a callback hook that updates Skim after compilation
 let g:vimtex_latexmk_callback_hooks = ['UpdateSkim']
