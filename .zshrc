@@ -37,6 +37,7 @@ zstyle ':zle:*' word-style unspecified
 ########################################
 # 補完
 # 補完機能を有効にする
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit
 compinit -u
 
@@ -191,3 +192,4 @@ fi
 export TERM=xterm-256color
 # fi
 #}}}
+#
