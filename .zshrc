@@ -37,6 +37,7 @@ zstyle ':zle:*' word-style unspecified
 ########################################
 # 補完
 # 補完機能を有効にする
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit
 compinit -u
 
@@ -192,7 +193,6 @@ export TERM=xterm-256color
 # fi
 #}}}
 #
-
 # Virtualenvwrapper
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs

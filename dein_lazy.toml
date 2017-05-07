@@ -267,7 +267,7 @@ repo= 'scrooloose/syntastic'
 on_ft = ['c','r','rmd','php','go','ruby','python','tex']
 
 [[plugins]]
-repo= 'qtmplsel.vim'
+repo= 'vim-scripts/qtmplsel.vim'
 on_ft = ['rmd','tex']
 
 [[plugins]]
