@@ -71,8 +71,6 @@ let R_rconsole_width = 75
 let R_min_editor_width = 75
 " Split help windows horizontally
 let R_nvimpager = "horizontal"
-" I prefer do not have the arguments of functions aligned
-let r_indent_align_args = 0
 '''
 
 [[plugins]]
