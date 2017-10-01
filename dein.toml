@@ -51,29 +51,29 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
-[[plugins]]
-repo = 'jalvesaq/Nvim-R'
-on_ft = ['rmd','r']
-hook_add = '''
-" Change Leader and LocalLeader keys:
-let maplocalleader = ","
-let mapleader = ";"
-" Use Ctrl+Space to do omnicompletion:
-if has("gui_running")
-	inoremap <C-Space> <C-x><C-o>
-else
-	inoremap <Nul> <C-x><C-o>
-endif
-" Type two `_` to get them converted into `<-`.
-let R_assign = 2
-" Split R windows vertically
-let R_rconsole_width = 75
-let R_min_editor_width = 75
-" Split help windows horizontally
-let R_nvimpager = "horizontal"
-" I prefer do not have the arguments of functions aligned
-let r_indent_align_args = 0
-'''
+# [[plugins]]
+# repo = 'jalvesaq/Nvim-R'
+# on_ft = ['rmd','r']
+# hook_add = '''
+# " Change Leader and LocalLeader keys:
+# let maplocalleader = ","
+# let mapleader = ";"
+# " Use Ctrl+Space to do omnicompletion:
+# if has("gui_running")
+# 	inoremap <C-Space> <C-x><C-o>
+# else
+# 	inoremap <Nul> <C-x><C-o>
+# endif
+# " Type two `_` to get them converted into `<-`.
+# let R_assign = 2
+# " Split R windows vertically
+# let R_rconsole_width = 75
+# let R_min_editor_width = 75
+# " Split help windows horizontally
+# let R_nvimpager = "horizontal"
+# " I prefer do not have the arguments of functions aligned
+# let r_indent_align_args = 0
+# '''
 
 [[plugins]]
 repo = 'lervag/vimtex'
