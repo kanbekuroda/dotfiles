@@ -263,11 +263,15 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 '''
 
 [[plugins]]
-repo= 'vim-syntastic/syntastic'
+repo = 'vim-syntastic/syntastic'
 on_ft = ['c','r','rmd','php','go','ruby','python','tex']
+hook_post_source = '''
+let g:syntastic_enable_r_lintr_checker = 1
+let g:syntastic_r_checkers = ['lintr']
+'''
 
 [[plugins]]
-repo= 'vim-scripts/qtmplsel.vim'
+repo = 'vim-scripts/qtmplsel.vim'
 on_ft = ['rmd','tex']
 
 [[plugins]]
