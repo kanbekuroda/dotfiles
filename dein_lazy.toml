@@ -263,7 +263,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 '''
 
 [[plugins]]
-repo= 'scrooloose/syntastic'
+repo= 'vim-syntastic/syntastic'
 on_ft = ['c','r','rmd','php','go','ruby','python','tex']
 
 [[plugins]]
