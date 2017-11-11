@@ -76,7 +76,6 @@ if (!Sys.getenv("__PYVENV_LAUNCHER__") == "") {  # Jupyterを使っていない�
 if(interactive()){
 # Suggested libraries:
     library(colorout)
-	library(setwidth)
 
 # Use text based web browser to navigate through R docs after help.start()
 # if you cannot run a graphical web browser (e.g. when you are in the
