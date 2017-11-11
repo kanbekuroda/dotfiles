@@ -1,7 +1,7 @@
 # 参考: https://oku.edu.mie-u.ac.jp/~okumura/stat/Rprofile.html
 
 # install.packages()のレポジトリ
-options(repos="https://cloud.r-project.org/")
+options(repos = structure(c(CRAN = "https://cloud.r-project.org/")))
 
 if (!Sys.getenv("__PYVENV_LAUNCHER__") == "") {  # Jupyterを使っていない場合
     if (capabilities("aqua")) {
