@@ -85,6 +85,11 @@ set infercase
 
 set autoindent
 
+" encoding周り
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
 " カーソル位置の記憶
 if has("autocmd")
   augroup redhat
